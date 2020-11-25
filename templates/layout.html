@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+    <title>Layout
+    </title>
+    <body>
+        <header>
+            <div class="container">
+                <strong><nav>
+                <h1 class="logo">
+                    Stuti's Web app
+                </h1>
+                <ul>
+                    <div class="menu">
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="{{url_for('about')}}">About</a></li>
+                    <li><a href="{{url_for('plot')}}">Plot</a></li>
+                </div>        
+                </ul>
+            </strong></nav>
+            </div>
+        </header>
+        <div class="container">
+            A Python product
+            <p>
+                This website was built with Python via Flask framework.
+
+            </p>
+            {%block content%}
+            {%endblock content%}
+        </div>
+    </body>
+</html>
